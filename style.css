@@ -1,0 +1,114 @@
+body, html {
+    height: 100%;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+button {
+    margin-top: 1rem;
+}
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    flex: 1;
+    padding: 5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: 2s 0s 1 slideIn;
+    
+
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    width: 100px;
+    border: 5px solid black;
+    border-radius: 0.5rem;
+    padding: 5px;
+}
+
+p, #btn-add {
+    
+}
+
+header {
+    animation-name: slideIn;
+    animation-duration: 2s;
+    
+}
+.side-bar >* {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide the sidebar off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow-x: hidden;
+    transition: 1s;
+    z-index: 1000; /* Ensure it's on top of other content */
+    padding-top: 60px; /* Add some padding to top for content */
+}
+.side-bar.active {
+    right: 0;
+    
+}
+
+svg {
+    height: 100px;
+    width: 100px;
+}
+svg:hover {
+    animation-name: rotate;
+    animation-duration: 500ms;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+@keyframes slideIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+@keyframes rotate {
+   
+    0%{
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+    
+}
